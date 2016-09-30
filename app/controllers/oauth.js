@@ -1,5 +1,5 @@
 // Require resource's model(s).
-var User = require("../models/user");
+var User = require('../models/user');
 var jwt = require('jwt-simple');
 var request = require('request');
 

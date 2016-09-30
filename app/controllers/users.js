@@ -2,11 +2,11 @@
 var User = require("../models/user");
 
 var index = function(req, res, next){
-  User.find({}, function(err, users) {
+  Guest.find({}, function(err, users) {
     if (err) {
       res.json({message: err});
     } else {
-      res.render('users/index', {users: users});
+      res.render('user/index', {users: users});
     }
   });
 };
@@ -18,7 +18,7 @@ var show = function(req, res, next){
     } else if (!user) {
       res.json({message: 'No user with this id.'});
     } else {
-      res.render('users/show', {user: user});
+      res.render('user/show', {user: user});
     }
   });
 };

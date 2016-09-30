@@ -13,25 +13,7 @@
         url: "/",
         templateUrl: "/templates/landing.html",
       })
-      .state("signup", {
-        url: "/venue_register",
-        templateUrl: "/templates/venue_register.html",
-        controller: "VenuesController",
-        controllerAs: "vm"
-      })
-      .state("venue_login", {
-        url: "/venue_login",
-        templateUrl: "/templates/venue_login.html",
-        controller: "VenuesController",
-        controllerAs: "vm"
-      })
-      .state("venue_home", {
-        url: "/venue_home",
-        templateUrl: "/templates/venue_home.html",
-        controller: "VenuesController",
-        controllerAs: "vm"
-      })
-      .state("userLogin", {
+      .state("user_Login", {
         url: "/user_login",
         templateUrl: "/templates/user_login.html",
         controller: "UserLoginController",
@@ -40,7 +22,7 @@
       .state("user_home", {
         url: "/user_home",
         templateUrl: "/templates/user_home.html",
-        controller: "UsersController",
+        controller: "CelebritiesController",
         controllerAs: "vm"
       })
     $urlRouterProvider.otherwise("/");

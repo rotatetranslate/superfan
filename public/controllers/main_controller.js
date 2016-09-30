@@ -2,7 +2,7 @@
   "use strict";
 
     angular
-      .module("superfanApp")
+      .module('superfanApp')
       .controller("MainController", MainController);
 
   MainController.$inject = ['userDataService', '$auth', '$state'];

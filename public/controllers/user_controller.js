@@ -1,17 +1,14 @@
 (function() {
-  "use strict";
+  angular.module('superfanApp')
+    .controller('UsersController', function($scope, $auth, $state, userDataService) {
 
-  angular
-  .module("superfanApp")
-  .controller("UsersController", UsersController);
-
-  UsersController.$inject = ["$state", 'userDataService'];
-
-  function UsersController($state, userDataService) {
-    var vm = this;
-
-    vm.userDS = userDataService;
-
-  }
-
+      $scope.authenticate = function(provider) {
+        if (!$auth.isAuthenticated()) {
+          $auth.authenticate(provider).then(function(res) {
+            userDataService.user = res.data.guest;
+            $state.go('user_home');
+          });
+        }
+      };
+    });
 })();

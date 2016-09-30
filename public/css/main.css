@@ -37,3 +37,8 @@ hr.style-one {
 /*h2 {
   text-align: center;
 }*/
+
+h1 {
+  align: center;
+  margin: 0 auto;
+}

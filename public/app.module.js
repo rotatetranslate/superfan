@@ -1,5 +1,5 @@
 (function() {
-  angular.module('superfanApp', [
+  angular.module("superfanApp", [
     "ui.router", 'satellizer'
     ])
 

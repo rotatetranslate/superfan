@@ -1,6 +1,6 @@
 (function() {
   angular.module('superfanApp')
-    .controller('UserLoginController', function($scope, $auth, $state, userDataService) {
+    .controller("UserLoginController", function($scope, $auth, $state, userDataService) {
 
       $scope.authenticate = function(provider) {
         if (!$auth.isAuthenticated()) {

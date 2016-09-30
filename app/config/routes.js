@@ -4,6 +4,7 @@ var express = require('express'),
 // Require controllers.
 // var userController = require('../controllers/users');
 var instagrammerController = require('../controllers/instagrammers');
+var UsersController = require('../controllers/users');
 var authController = require('../controllers/oauth');
 
 // root path:
@@ -12,7 +13,7 @@ var authController = require('../controllers/oauth');
 //||||||||||||||||||||||||||--
 // USERS CRUD SERVICES
 //||||||||||||||||||||||||||--
-// router.get('/users',     userController.index);
+router.get('/user',     UsersController.index);
 
 //||||||||||||||||||||||||||--
 // INSTAGRAMMER CRUD SERVICES
